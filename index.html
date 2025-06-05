@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .relative-1{
+            position: relative;
+        }
+        .relative-2{
+            position: relative;
+            margin-top: 20%;
+            margin-left: 12%;
+        }
+        .blue{
+            color: rgb(3, 3, 128);
+        }
+        .new{
+            display: inline-block;
+            justify-content: space-between;
+            width: 50%;
+            height: 642px;
+        }
+        #spacing{
+            left: 58%;
+            top: 20%;
+            position: absolute;
+        }
+        .next1{
+            position: absolute;
+            top: 9%;
+            margin-left: 12px;
+            font-size: smaller;
+            color: #767373;
+        }
+        .changesize{
+            height: 38px;
+            outline-color: #9f9b9b;
+            color: #9f9b9b;
+            background: transparent;
+            border-radius: 3px;
+
+        }
+        #givespace{
+            margin-top: 15%;
+        }
+        #add-space{
+            margin-top: 3%;
+        }
+        .addspace input{
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style> 
+</head>
+<body>
+
+    <div class="new" style="background-color: #9f9b9b16;">
+        <div class="relative-1">
+        <img src="/firstAssessment/Page1-Image/Group.png" alt="" style="margin-top: 8%; margin-left: 18%;">
+        </div>
+        <div class="relative-2">
+        <img src="/firstAssessment/Page1-Image/pablo-sign-in_1-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="new" id="spacing" style="background-color: white;">
+           <div>
+            <h1 class="blue">Welcome!</h1>
+            <div class="next1">
+            <h3>Enter details to login </h3>
+            </div>
+          </div>
+        <div id="givespace">
+        <form name="loginform">
+        <div class="addspace">
+            <label for="username"  >
+                <input type="username" name="username" id="username" placeholder="Email" size="60" class="changesize">
+            </label>
+        </div>
+        <div class="addspace" id="add-space">
+          <label for="password">
+            <input type="password" name="password" id="password" placeholder="Password" size="60" class="changesize"><span style="position: relative; right: 8%; color: #39CDCC; font-weight: bold;">SHOW</span>
+        </label>
+        </div>
+        <div style="margin-top: 3%;">
+            <span><a href="resetpasword.html"></a><h3 style="color:  #39CDCC; font-size: 12px;">FORGOT PASSWORD?</h3></span>
+        </div>
+          <div class="changesize1">
+           <button style="height:49px; width: 453px; border: 1px solid rgba(86, 64, 64, 0); color: white; background-color:  #39CDCC; border-radius: 10px; text-align: center; margin-top: 3%;font-size: 15px;"><a href="../page2.html">LOG IN</a></button>
+
+          </div>
+   </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+   <!-- <div class="flex1">
+    <div class="relative-1">
+        <img src="./Page1-Image/Group.png" alt="">
+    </div>
+    <div class="relative-2">
+        <img src="./Page1-Image/pablo-sign-in 1.png" alt="">
+    </div>
+   <div class="overall"> 
+
+   <div>
+        <form action="login.php" method="post" name="loginform">
+        <div>
+            <label for="username" >
+                <input type="username" name="username" id="username" placeholder="Enter Email">
+            </label>
+        </div>
+        <div>
+          <label for="password">
+            <input type="password" name="password" id="password" place>
+        </label>
+        </div>
+        <div>
+            <span><a href="resetpasword.html"></a>Forgot Password?</span>
+        </div>
+          <div>
+            <input type="submit" value="login">
+          </div>
+   </div> -->

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+#text{
+    font-family: 'work Sans' , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0cap;
+}
+#box-icon{
+    position: relative;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    left: 6px;
+}
+#bidiv{
+    width: 40px;
+    height: 40px;
+    background-color: #ffdbfa;
+    top: 248px;
+    left: 373;
+    border-radius: 50%;
+}
+.side-by-side{
+    display: inline-block;
+    /* margin-left: 5%; */
+}
+#bring-up{
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+.straight{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-left: 2%;
+}
+.square{
+    width: 240px;
+    height: 160px;
+    border: 0px solid rgb(86, 64, 64);
+    box-shadow: 5px 5px 10px -1px rgb(181, 175, 175);
+    background-color: white;
+    /* outline-color: transparent; */
+}
+.square:hover{
+    color:black; 
+    background-color: #ecebecc9;
+}
+.one-one{
+    list-style: none;
+    display: block;
+    margin-left: 20%;
+}
+.no-margin{
+    margin-top: 10%;
+}
+.give-margin{
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 92%;
+}
+
+#sidebar {
+  /* height: 100vh; */
+  width: 240px;
+  background-color: white;
+  border-right: 1px solid #d4d0d0;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  /* overflow removed */
+  margin-top: 5%;
+  box-shadow: 3px 0px 8px -1px rgb(230, 227, 227);
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px; /* slightly smaller to save space */
+}
+
+.menu-heading {
+  margin: 16px 10px 6px;
+  font-size: 11px;
+  color: rgb(86, 85, 85);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text{
+  color: #888;;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color:  #ecebecc9;
+}
+
+.icon {
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.text {
+  flex-grow: 1;
+}
+.set-nav{
+    display: block;
+}
+
+.nav {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  /* border: 1px solid; */
+  box-shadow: 0px 3px 8px -1px rgb(210, 206, 206);
+  /* box-shadow: 5px 5px 10px -1px rgb(181, 175, 175);
+  increase width aswell */
+}
+
+.nav ol{
+  display: flex;
+  list-style: none;
+  /* margin: auto; */
+  position: static;
+}
+.nav ol li{
+  width: 182.5px;
+  height: 30px;
+  color: black;
+  background-color: white ;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 18px;
+}
+.nav ol li:hover{
+  /* background-color: #A889D1; */
+  border: 2px solid white;
+  color: rgb(1, 47, 72);
+  font-size: 22px;
+  font-weight: bolder;
+}
+.search-input{
+  /* font-size: ;
+  font-family: ; */
+  color: #333333;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.width{
+  width: 401px;
+  border: 0.3px solid rgb(219, 213, 213);
+  border-top-right-radius: 8.2px;
+  border-bottom-right-radius: 8.2px;
+  border-top-left-radius: 8.2px;
+  border-bottom-left-radius: 8.2px;
+
+}
+#change1{ 
+  position: absolute;
+  top: 0%;
+}
+table{
+  border-collapse: collapse;
+  /* box-shadow: -5px -5px 10px -1px rgb(181, 175, 175); */
+  height: 200%;
+  padding: 15px;
+  box-shadow: -5px 5px 10px -1px rgb(181, 175, 175);
+}
+th{
+  padding: 0.3em 1em;
+}
+tr{
+    border-bottom: 0.4px solid rgb(186, 185, 185);
+}
+td{
+  padding: 0.5em 0.7em;
+  /* border-radius: 6px; */
+}
+table, th, td{
+    border: 0px;
+}
+tr:hover{
+    color:black; 
+    background-color: #ecebecc9;
+}
+         .link{
+            display: flex;
+            position: relative;
+            left: 280px;
+            gap: 20px;
+         }
+         .link ul{ 
+            display: flex;
+            list-style: none;
+         }
+         .link ul a{
+            text-decoration: none;
+            color: rgb(31, 3, 3);
+            margin-right: 80px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+         }
+         .link ul a:hover{
+            color: aqua;
+         }
+        .profile{
+            display: flex;
+            padding: 5px;
+            position: relative;
+            left: 300px;
+            height: 90px;
+            width: 1200px;
+         }
+        .profile #amount h3{
+            color: navy;
+            font-weight: lighter;
+         }
+        .profile #amount .small{
+            color: navy;
+         }
+        .profile .name h3{
+            color: navy;
+            font-weight: lighter;
+        }
+        .profile .name .small{
+            color: navy;
+            font-weight: lighter;
+        }
+        .topbar{
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        .toppings h2{
+            padding: 10px;
+            margin-right: 370px;
+            font-weight: lighter;
+            color: navy;
+         }
+        .toppings button{
+            background-color: #fff;
+            border: solid 1.5px;
+            border-radius: 5px;
+            width: 180px;
+            height: 30px;
+            margin-top: 35px;
+            margin-right: 2%;
+            gap: 5%;
+
+            
+         }
+         .toppings #bt1{
+            color: red;
+         }
+         .toppings #bt2{
+            color: aqua;
+         }
+         .name{
+            margin-left: 40px;
+         }
+         #line{
+            margin-top: 20px;
+
+         }
+         #vertical-line{
+            margin-left: 50px;
+         }
+         .toppings{
+            display: flex;
+            align-items: center;
+
+         }
+         .tabs a.active {
+  border-color: #2f80ed;
+  font-weight: bold;
+}
+
+.details .section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.details .section h4 {
+  margin-bottom: 15px;
+  color: #2f80ed;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px 30px;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="set-nav">
+        <div class="nav">
+        <ol class="change1">
+            <li class="change"><img src="./firstAssessment/Page1-Image/Group.png" alt="" style="position: absolute; left: 3%; top: 26%;"></li>
+            <li class="change" style="margin-left: 50%;">
+              <div class="width" style="position: absolute; top: 25%;">
+              <form action="">
+                <div style="display: flex; ">
+                    <span style="margin-left: 10%; margin-top: 2%;"><input type="search" class="search-input" placeholder="search for anything" ></span>
+                    <span><div style="background-color: rgb(13, 171, 171); width: 56px; height: 40px; border-bottom-right-radius: 22% ; border-top-right-radius: 22% ; margin-left: 320%;">
+                      <img src="./firstAssessment/page2-Image/Vector.png" alt="" style="width: 13.9px; height: 14px; position: relative; top: 15px;">
+                    </div></span>
+              </div>
+              </div>
+              </form>
+            </li>
+        </ol>
+        <ol class="change2" style="margin-left: 40%;">
+            <li class="change"><span><div style="display: flex;"><a href="#" style=" font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 400; size: 16px; letter-spacing: 0%;">Docs</a><img src="./firstAssessment/page2-Image/np_notification_2425223_000000 1.png" alt="" style="position: relative; width: 26px; height: 26px; top:0px ; left: 40px;"></div></span>
+            </li>
+            <li class="change" ><span><div style="display: flex; font-family: 'work Sans' , sans-serif ; font-weight: 500; size: 20px ; letter-spacing: 0px;"><img src="./firstAssessment/page2-Image/avatar.png" alt="" style="position: absolute; width: 40px; height: 40px; top:27.5% ; "><span style="position: relative; margin-left: 29%; margin-top: 0%; height: 19px; width: 58px;">Adejeji</span><img src="./firstAssessment/page2-Image/np_dropdown_615120_000000 1.png" alt="" style="position: relative; width:20px; height: 15px; margin-top:4px ; margin-left: 5%; "></div></span>
+            </li>
+        </ol>
+       </div>
+  </div>
+  <div class="duh">
+  <div class="side-by-side" id="sidebar">
+    <ul class="menu">
+
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/briefcase 1.png" alt=""></span>
+        <span class="text" style="font-size: 15.5px; color: #646464;">Switch Organization</span>
+      </li>
+
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/home 1.png" alt=""></span>
+        <span class="text">Dashboard</span>
+      </li>
+
+      <li class="menu-heading">CUSTOMERS</li>
+
+      <li class="menu-item" style="background-color: rgba(13, 171, 171, 0.644); border-left: 7px solid rgb(13, 171, 171);">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/users 1.png" alt=""></span>
+        <span class="text" style="color: white;">Users</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/user-friends 1.png" alt=""></span>
+        <span class="text">Guarantors</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/sack 1.png" alt=""></span>
+        <span class="text">Loans</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/handshake-regular 1.png" alt=""></span>
+        <span class="text">Decision Models</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/piggy-bank 1.png" alt=""></span>
+        <span class="text">Savings</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/Group 104.png" alt=""></span>
+        <span class="text">Loan Request</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/user-check 1.png" alt=""></span>
+        <span class="text">White List</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/user-times 1.png" alt=""></span>
+        <span class="text">Karma</span>
+      </li>
+
+      <li class="menu-heading">BUSINESS</li>
+
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/briefcase 1.png" alt=""></span>
+        <span class="text">Organization</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(2)/Group 104.png" alt=""></span>
+        <span class="text">Loan Product</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/np_bank_148501_000000 1.png" alt=""></span>
+        <span class="text">Savings Products</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/coins-solid 1.png" alt=""></span>
+        <span class="text">Fees and Charges</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/icon.png" alt=""></span>
+        <span class="text">Transactions</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/galaxy 1.png" alt=""></span>
+        <span class="text">Services</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/user-cog 1.png" alt=""></span>
+        <span class="text">Service Account</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/scroll 1.png" alt=""></span>
+        <span class="text">Settlements</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/chart-bar 2.png" alt=""></span>
+        <span class="text">Reports</span>
+      </li>
+
+      <li class="menu-heading">SETTINGS</li>
+
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/sliders-h 1.png" alt=""></span>
+        <span class="text">Preference</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/badge-percent 1.png" alt=""></span>
+        <span class="text">Fees and Pricing</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon"><img src="./firstAssessment/page2-image(3)/clipboard-list 1.png" alt=""></span>
+        <span class="text">Audits Logs</span>
+      </li>
+
+    </ul>
+    </div>
+    <div class="side-by-side" id="bring-up" style="width: fit-content;">
+      <div>
+        <div class="top-bar">
+          <div class="toppings" style="position: relative; left: 25%;">
+            <h2>User Details</h2>
+            <button class=btn id="bt1"><small>BLACKLIST USER</small></button>
+            <button  class="btn"  id="bt2"><small>ACTIVE USER</small></button>
+          </div>
+        </div>
+         <!-- <div> -->
+        <div class="profile" style="background-color: white;" >
+          <div class="profile-pic" style="margin-left: 2%; background-color: rgb(228, 244, 245); height: 70%; width: 60px; border-radius: 50%;"><img src="./firstAssessment/page4-image/np_user_948637_000000 1.png" alt="" style="position: relative; left: 12%; top: 15%;"></div>
+          <div class="name" style="margin-left: 40px;">
+            <h3>Grace Effiom</h3>
+            <div style="font-size: smaller; position: absolute; top: 50px;" class="small">LSQFf587g90</div>
+            
+          </div>
+         <div id="vertical-line"  style="margin-top: 1.3%;"><img src="./firstAssessment/page4-image/Line 1.png" alt="" style="height: 70px;"></div>
+         <div class="name" id="line">
+            <small class="small">User's Tier</small>
+            <div style="margin-top: 10px;">
+                <img src="./firstAssessment/page4-image/np_star_1208084_000000 1.png" alt="">
+                <img src="./firstAssessment/page4-image/np_star_1171151_000000 2.png" alt="">
+                <img src="./firstAssessment/page4-image/np_star_1171151_000000 2.png" alt="">
+            </div>
+          </div>
+          <div id="vertical-line" style="margin-top: 1.3%;"><img src="./firstAssessment/page4-image/Line 1.png" alt="" style="height: 70px;"></div>
+          <div id="amount" class="name">
+            <h3>200,000.00</h3>
+            <div style="font-size: smaller; position: absolute; top: 50px;" class="small">9912345678/Providus Bank</div>
+          </div>
+    </div>
+    <div class="link" style="background-color: white; margin-left: 1.5%;">
+        <!-- <div> -->
+            <ul>
+                <li><a href="" style="color: rgb(63, 243, 243); border-bottom: 2px solid #2f80ed;">General Details</a></li>
+                <li><a href="">Documents</a></li>
+                <li><a href="">Bank Details</a></li>
+                <li><a href="">Loan</a></li>
+                <li><a href="">Savings</a></li>
+                <li><a href="">App and system</a></li>
+            </ul>
+        <!-- </div> -->
+    </div>
+    <!-- </div> -->
+    </div>
+    <div class="give-margin" style="background-color: white;" >
+      <div class="details">
+      <div class="section">
+        <h4>Personal Information</h4>
+        <div class="grid">
+          <div><strong>Full Name:</strong> Grace Effiom</div>
+          <div><strong>Phone Number:</strong> 07060780922</div>
+          <div><strong>Email Address:</strong> grace@gmail.com</div>
+          <div><strong>BVN:</strong> 07060780922</div>
+          <div><strong>Gender:</strong> Female</div>
+          <div><strong>Marital Status:</strong> Single</div>
+          <div><strong>Children:</strong> None</div>
+          <div><strong>Type of Residence:</strong> Parent's Apartment</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h4>Education and Employment</h4>
+        <div class="grid">
+          <div><strong>Level of Education:</strong> B.Sc</div>
+          <div><strong>Employment Status:</strong> Employed</div>
+          <div><strong>Sector of Employment:</strong> FinTech</div>
+          <div><strong>Duration of Employment:</strong> 2 years</div>
+          <div><strong>Office Email:</strong> grace@lendsqr.com</div>
+          <div><strong>Monthly Income:</strong> ₦200,000.00 - ₦400,000.00</div>
+          <div><strong>Loan Repayment:</strong> 40,000</div>
+        </div>
+      </div>
+      <div class="section">
+        <h4>Socials</h4>
+        <div class="grid">
+          <div><strong>Twitter:</strong> @grace_effiom</div>
+          <div><strong>Facebook:</strong> Grace Effiom</div>
+          <div><strong>Instagram:</strong> @grace_effiom</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h4>Guarantor</h4>
+        <div class="grid">
+          <div><strong>Full Name:</strong> Debby Ogana</div>
+          <div><strong>Phone Number:</strong> 07060780922</div>
+          <div><strong>Email Address:</strong> debby@gmail.com</div>
+          <div><strong>Relationship:</strong> Sister</div>
+        </div>
+      </div>
+
+        <div class="section">
+        <div class="grid">
+          <div><strong>Full Name:</strong> Debby Ogana</div>
+          <div><strong>Phone Number:</strong> 07060780922</div>
+          <div><strong>Email Address:</strong> debby@gmail.com</div>
+          <div><strong>Relationship:</strong> Sister</div>
+        </div>
+      </div>
+      </div>
+     
+
+    </div>
+    </div>
+    
+
+</body>
+</html>
+
+
+
+
